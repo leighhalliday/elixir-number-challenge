@@ -1,6 +1,10 @@
 defmodule SumArrayOperatorsTest do
   use ExUnit.Case
 
+  test "when no numbers" do
+    assert SumArrayOperators.perf_sum([]) == 0
+  end
+
   test "when only single number" do
     assert SumArrayOperators.perf_sum([1]) == 1
   end

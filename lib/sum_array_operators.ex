@@ -1,6 +1,10 @@
 defmodule SumArrayOperators do
-  def perf_sum(list) do
-    sum_array_operators(Enum.reverse(list))
+  def perf_sum([head | tail]) do
+    sum_array_operators(Enum.reverse([head | tail]))
+  end
+
+  def perf_sum([]) do
+    0
   end
 
   # only a single number

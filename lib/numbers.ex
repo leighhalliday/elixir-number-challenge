@@ -27,6 +27,11 @@ defmodule Numbers do
     end
   end
 
+  # if no numbers, no solutions
+  def solutions([], []) do
+    []
+  end
+
   # figure out solutions for + and -
   def plus_minus(acc, [head | tail]) do
     solutions(acc ++ [:+, head], tail) ++

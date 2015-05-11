@@ -1,6 +1,14 @@
 defmodule NumbersTest do
   use ExUnit.Case
 
+  test "no numbers" do
+    assert Numbers.solutions([], []) == []
+  end
+
+  test "one number" do
+    assert Numbers.solutions([100], []) == ["100"]
+  end
+
   test "single match" do
     assert Numbers.solutions([99, :+, 1], []) == ["99+1"]
   end
